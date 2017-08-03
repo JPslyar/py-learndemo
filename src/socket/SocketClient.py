@@ -1,0 +1,10 @@
+import socket   
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   
+sock.connect(('localhost',7556))   
+import time   
+time.sleep(2)   
+sock.send(b'1')  
+print(sock.recv(1024).decode())   
+sock.close()
+input('stop......')
+
